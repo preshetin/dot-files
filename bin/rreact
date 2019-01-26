@@ -1,0 +1,24 @@
+#!/bin/sh
+
+
+echo "Let's create react app, and git init and initial commit"
+
+read -p 'Folder name:' folderName
+
+# read car1 car2 car3
+#echo Your first car was: $car1
+#echo Your second car was: $car2
+#echo Your third car was: $car3
+
+echo Now creating in $folderName
+create-react-app $folderName
+cd $folderName
+git init
+git add . 
+git commit -m "Initial commit of create-react-app"
+echo *.swp >> .gitignore
+echo tags >> .gitignore
+#vim src/App.js -c "%s/Welcome to React/$folderName/" -c 'wq'
+git add . 
+git commit -m "Ignore vim util files & set app title"
+yarn start

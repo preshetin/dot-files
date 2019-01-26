@@ -1,0 +1,6 @@
+#!/bin/sh
+
+repo_name=${PWD##*/}
+user_name='preshetin'
+
+open -a 'Google Chrome' https://github.com/$user_name/$repo_name/commits/master

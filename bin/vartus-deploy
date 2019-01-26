@@ -1,0 +1,26 @@
+#!/bin/sh
+
+folder_name=${PWD##*/}
+
+if [ $folder_name = discover ] || [ $folder_name = estimate ] || [ $folder_name = statistics ] 
+then
+  yarn build
+  aws s3 sync build/ s3://vartuseu-discover/$folder_name
+  echo "Deploy finished! Visit http://vartuseu-discover.s3-website.eu-central-1.amazonaws.com/$folder_name"
+fi
+
+if [ $folder_name = 'report-react' ]
+then
+  yarn build
+  aws s3 sync build/ s3://vartuseu-discover/appraisal
+  echo "Deploy finished! Visit http://vartuseu-discover.s3-website.eu-central-1.amazonaws.com/appraisal"
+fi
+
+if [ $folder_name = site ] 
+then
+  gatsby build
+  aws s3 sync public/ s3://vartuseu-discover
+  echo "Deploy finished! Visit http://vartuseu-discover.s3-website.eu-central-1.amazonaws.com"
+fi
+
+
