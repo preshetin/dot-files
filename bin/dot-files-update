@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cp ~/.vimrc ~/Developer/dot-files/.
+sudo cp -R ~/.vim/ ~/Developer/dot-files/.vim/
+cp -R ~/bin/ ~/Developer/dot-files/bin/
+cp ~/.bash_profile ~/Developer/dot-files/
+cp ~/.gitconfig ~/Developer/dot-files/
+
+echo "Dot files copied. Now git commit and push them!"

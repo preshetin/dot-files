@@ -7,7 +7,6 @@ set nocompatible
 syntax enable
 filetype plugin on
 
-
 "-------------Manual plugins start-----------"
 
 set runtimepath+=~/.vim/bundle/nerdtree
@@ -29,11 +28,6 @@ set runtimepath+=~/.vim/bundle/ale
 "-------------Manual plugins end-------------"
 
 "-----Sandbox-----"
-" for vim 8
-"if (has("termguicolors"))
-" set termguicolors
-"endif
-
 colorscheme gruvbox
 let g:gruvbox_contrast_dark="soft"
 let g:gruvbox_contrast_light="soft"
