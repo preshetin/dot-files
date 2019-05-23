@@ -59,10 +59,12 @@ alias config='/usr/bin/git --git-dir=/Users/petrreshetin/.cfg/ --work-tree=/User
 # added by Anaconda2 5.2.0 installer
 #export PATH="/Users/petrreshetin/anaconda2/bin:$PATH"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/petrreshetin/Desktop/google-cloud-sdk/path.bash.inc' ]; then source '/Users/petrreshetin/Desktop/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/petrreshetin/google-cloud-sdk/path.bash.inc' ]; then . '/Users/petrreshetin/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/petrreshetin/Desktop/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/petrreshetin/Desktop/google-cloud-sdk/completion.bash.inc'; fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if [ -f '/Users/petrreshetin/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/petrreshetin/google-cloud-sdk/completion.bash.inc'; fi
