@@ -1,3 +1,6 @@
 [submodule ".vim/bundle/ale"]
 	path = .vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule ".vim/bundle/vim-import-js"]
+	path = .vim/bundle/vim-import-js
+	url = https://github.com/Galooshi/vim-import-js.git
